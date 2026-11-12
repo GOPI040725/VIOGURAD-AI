@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIOGUARD &mdash; Video Violence Detection</title>
+  <meta name="description" content="Simple and accurate video violence detection.">
+  <meta name="theme-color" content="#0a0a0c">
+
+  <!-- Clean SVG Favicon (Red & White on Black) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0a0c'/%3E%3Cpath d='M16 4l10 4.5v7.5c0 6.2-4.3 11-10 13-5.7-2-10-6.8-10-13V8.5z' fill='none' stroke='%23e50914' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='15' r='3' fill='%23ffffff'/%3E%3C/svg%3E">
+
+  <!-- Inter & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a class="brand" href="/" aria-label="VIOGUARD Home">
+        <span class="brand-badge"></span>
+        <span class="brand-text">VIOGUARD <span class="red-dot">AI</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <span class="status-pill" id="modelPill" data-state="checking">
+          <i class="dot"></i>
+          <span id="modelPillText">Checking model...</span>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-wrapper">
+    <!-- Hero / Title -->
+    <section class="hero">
+      <span class="badge">SAFETY INTELLIGENCE</span>
+      <h1>Video Violence <span class="text-red">Detection</span></h1>
+      <p class="subtitle">Upload any video to check for violent activity with fast frame-by-frame analysis.</p>
+    </section>
+
+    <!-- Main Container -->
+    <section class="app-card" id="analyze" aria-live="polite">
+      <!-- Model Alert if any -->
+      <div class="notice" id="modelNotice" hidden></div>
+
+      <!-- VIEW 1: UPLOAD -->
+      <div id="viewUpload">
+        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Choose or drop video">
+          <div class="upload-icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+          </div>
+          <h2>Drag & drop your video here</h2>
+          <p class="drop-hint" id="dropHint">Supports MP4, AVI, MOV up to <span id="maxMb">200</span> MB</p>
+          <button class="btn btn-red" type="button" id="browseBtn">Select Video</button>
+          <input type="file" id="fileInput" accept=".mp4,.avi,.mov,video/mp4,video/x-msvideo,video/quicktime" hidden>
+        </div>
+
+        <!-- Video Selected State -->
+        <div class="selected-box" id="selected" hidden>
+          <div class="video-preview-wrapper">
+            <video id="previewVideo" controls muted playsinline preload="metadata"></video>
+          </div>
+          <div class="selected-details">
+            <div class="file-meta">
+              <span class="label">SELECTED FILE</span>
+              <h3 id="fileName">-</h3>
+              <p class="info" id="fileInfo">-</p>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-ghost" type="button" id="clearBtn">Remove</button>
+              <button class="btn btn-red" type="button" id="analyzeBtn">Analyze Video</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="error-msg" id="uploadError" role="alert" hidden></p>
+      </div>
+
+      <!-- VIEW 2: PROGRESS -->
+      <div id="viewProgress" hidden>
+        <div class="progress-box">
+          <div class="spinner"></div>
+          <h2 id="progressTitle">Analyzing Video...</h2>
+          <p class="progress-sub" id="progressDetail">Extracting video frames</p>
+
+          <div class="progress-bar-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+
+          <div class="progress-number" id="progressPct">0%</div>
+
+          <ol class="progress-steps" id="progressSteps">
+            <li data-step="upload">Upload</li>
+            <li data-step="decoding">Extract Frames</li>
+            <li data-step="inference">AI Inference</li>
+            <li data-step="done">Complete</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- VIEW 3: RESULT -->
+      <div id="viewResult" hidden>
+        <!-- Verdict Banner -->
+        <div class="verdict-banner" id="verdict">
+          <div class="verdict-left">
+            <span class="verdict-icon" id="verdictIcon">!</span>
+            <div>
+              <h2 class="verdict-title" id="verdictLabel">-</h2>
+              <p class="verdict-sub" id="verdictSub">-</p>
+            </div>
+          </div>
+          <div class="verdict-right">
+            <div class="score-wrap">
+              <span class="score-val" id="scoreValue">0%</span>
+              <span class="score-label">Violence Probability</span>
+            </div>
+            <button class="btn btn-warning-sound" type="button" id="soundBtn" hidden>Play Alert Sound</button>
+          </div>
+        </div>
+
+        <!-- Result Grid -->
+        <div class="result-grid">
+          <!-- Video & Timeline Card -->
+          <div class="card">
+            <h3>Video Preview & Timeline</h3>
+            <div class="video-container">
+              <video id="resultVideo" controls playsinline preload="metadata"></video>
+            </div>
+
+            <div class="timeline-wrap">
+              <div class="timeline-meta">
+                <span>Segments Heatmap (click to seek)</span>
+                <div class="timeline-legend">
+                  <span><i class="legend-box low"></i> Below threshold</span>
+                  <span><i class="legend-box high"></i> Threat flagged</span>
+                </div>
+              </div>
+              <div class="timeline-bar" id="timeline" role="list"></div>
+            </div>
+          </div>
+
+          <!-- Analysis Details Card -->
+          <div class="card">
+            <h3>Decision & Confidence</h3>
+            <div class="gauge-wrap">
+              <div class="gauge-track">
+                <div class="gauge-fill" id="gaugeFill"></div>
+                <div class="gauge-thr" id="gaugeThr">
+                  <span id="gaugeThrLabel">threshold 50%</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="explanation-text" id="explanation"></p>
+
+            <div class="stats-grid">
+              <div class="stat-item"><span class="k">Confidence</span><span class="v" id="statConf">-</span></div>
+              <div class="stat-item"><span class="k">Result Strength</span><span class="v" id="statCert">-</span></div>
+              <div class="stat-item"><span class="k">Processing Time</span><span class="v" id="statTime">-</span></div>
+              <div class="stat-item"><span class="k">Video Duration</span><span class="v" id="statDur">-</span></div>
+              <div class="stat-item"><span class="k">Segments</span><span class="v" id="statSeg">-</span></div>
+              <div class="stat-item"><span class="k">Frames Analyzed</span><span class="v" id="statFrames">-</span></div>
+              <div class="stat-item"><span class="k">Resolution / FPS</span><span class="v" id="statRes">-</span></div>
+              <div class="stat-item"><span class="k">Aggregation</span><span class="v" id="statAgg">-</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segment Table (Collapsible) -->
+        <details class="card details-card">
+          <summary>Segment Details Breakdown</summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Time Range</th>
+                  <th>Score</th>
+                  <th>Label</th>
+                </tr>
+              </thead>
+              <tbody id="segBody"></tbody>
+            </table>
+          </div>
+        </details>
+
+        <div class="center-btn">
+          <button class="btn btn-red btn-lg" type="button" id="againBtn">Analyze Another Video</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>VIOGUARD &middot; Video Safety System</span>
+      <span class="footer-muted">Red / Black / White Edition</span>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</body>
+</html>
