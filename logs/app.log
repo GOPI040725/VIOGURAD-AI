@@ -1,0 +1,196 @@
+2026-10-09 16:43:18,892 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-09 16:43:19,354 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-09 16:43:24,254 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-09 16:43:25,030 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-09 16:44:29,106 INFO jobs: Job da219d88e5b749dca0bac3a73ae5b924 done: violence (19.06s)
+2026-10-09 16:45:13,571 INFO jobs: Job 55480e7293d549f891aa1ecfc9f169c4 done: non_violence (9.64s)
+2026-10-09 16:46:16,133 INFO jobs: Job a36192d3a38a49fe97953c1a0d101302 done: non_violence (16.03s)
+2026-10-09 16:47:24,433 INFO jobs: Job f0ea01027eed47208a1c91da748b417a done: violence (41.55s)
+2026-10-11 21:03:41,283 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-11 21:03:42,022 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-11 21:03:47,736 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-11 21:03:48,928 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-11 21:04:37,320 INFO jobs: Job 27228ef62b0d4d6da6e0ec46553f2f9e done: violence (11.37s)
+2026-10-11 21:17:13,762 INFO jobs: Job 7557686a2f9b49e5b94857df3cfd56ee done: violence (37.48s)
+2026-10-11 21:29:05,328 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-11 21:29:05,946 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-11 21:29:14,845 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-11 21:29:16,886 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-11 21:30:23,164 INFO jobs: Job 7f23fb80155742b4ad96ca938479e314 done: violence (43.84s)
+2026-10-11 21:31:41,185 INFO jobs: Job 1f545c1ee4ed44c8911b950cb90b076a done: non_violence (5.46s)
+2026-10-11 21:41:16,871 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-11 21:41:19,066 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-11 21:41:49,658 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-11 21:41:54,920 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-11 21:42:30,302 INFO jobs: Job f98c84521862488496ae5daf7331dc01 done: violence (44.41s)
+2026-10-14 11:58:56,338 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-14 11:58:58,748 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-14 11:59:11,269 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-14 11:59:13,951 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-14 12:00:30,427 INFO jobs: Job fd87b827c3344bd580561a8d21aa45c2 done: non_violence (35.70s)
+2026-10-14 12:01:13,879 INFO jobs: Job 82f9fcdc7d59430eb216b15d84d04c64 done: non_violence (11.96s)
+2026-10-14 12:01:47,770 INFO jobs: Job 817c2bbc293e4d58b886ad94c72bd363 done: violence (17.48s)
+2026-10-14 12:02:36,719 INFO jobs: Job 1b81bd96242e4e9ab7a218d79898f8ad done: non_violence (8.71s)
+2026-10-29 13:33:58,955 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-29 13:34:01,277 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-29 13:34:09,769 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-29 13:34:10,607 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-29 13:35:12,594 INFO jobs: Job a7f120daabcb4e71ae82a562acb5841f done: violence (31.98s)
+2026-10-29 22:03:04,564 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-29 22:03:06,755 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-29 22:03:32,160 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-29 22:03:35,393 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-29 22:04:13,223 INFO jobs: Job 3c3c238c04e54155b3171029c1b0eb53 done: violence (37.14s)
+2026-10-29 22:05:47,954 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-29 22:05:48,521 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-29 22:06:00,754 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-29 22:06:02,816 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-29 22:06:29,951 INFO jobs: Job c4c3ada2d56d4335b564c8717274dcb6 done: violence (17.10s)
+2026-10-31 20:24:12,215 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-31 20:24:14,182 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-31 20:24:20,848 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-31 20:24:21,719 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-31 20:25:20,103 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-31 20:25:20,217 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-31 20:25:25,756 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-31 20:25:26,643 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-31 20:30:05,672 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-10-31 20:30:05,856 INFO waitress: Serving on http://127.0.0.1:5000
+2026-10-31 20:30:15,703 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-10-31 20:30:16,779 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-10-31 20:31:56,377 INFO jobs: Job 081677044d0b4c38b7a3b4f5035f509a done: violence (27.08s)
+2026-11-01 17:42:34,417 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-11-01 17:42:36,311 INFO waitress: Serving on http://127.0.0.1:5000
+2026-11-01 17:42:44,273 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-11-01 17:42:45,175 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-11-01 17:44:20,665 INFO jobs: Job b3ff4b7e515445c2ae762b6c0c5647bb done: non_violence (42.77s)
+2026-11-01 17:46:06,482 INFO jobs: Job cec36bce45134ea7a566a00ea4e2d49c done: violence (72.74s)
+2026-11-01 22:56:37,335 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-11-01 22:56:39,305 INFO waitress: Serving on http://127.0.0.1:5000
+2026-11-01 22:56:54,706 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-11-01 22:56:56,656 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-11-01 22:57:51,477 INFO jobs: Job b9aac8d6b2c240ccbd694bc897359748 done: non_violence (13.37s)
+2026-11-01 22:58:58,217 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-11-01 22:58:58,950 INFO waitress: Serving on http://127.0.0.1:5000
+2026-11-01 22:59:04,349 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-11-01 22:59:05,382 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-11-01 23:00:33,163 INFO jobs: Job 6d11a649ab614df6bd8e8a0abc93ed07 done: non_violence (27.83s)
+2026-11-01 23:07:02,196 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-11-01 23:07:03,112 INFO waitress: Serving on http://127.0.0.1:5000
+2026-11-01 23:07:16,774 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-11-01 23:07:18,805 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-11-01 23:12:46,952 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-11-01 23:12:47,350 INFO waitress: Serving on http://127.0.0.1:5000
+2026-11-01 23:12:51,626 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-11-01 23:12:52,362 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-11-01 23:14:34,761 INFO jobs: Job 1bc396dbeb91484bad3dc34b27814e80 done: non_violence (58.58s)
+2026-11-01 23:16:58,443 INFO jobs: Job ada14e3ab09c4f0cb3d0e17b98287f3f done: violence (123.04s)
+2026-11-01 23:18:46,103 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-11-01 23:18:46,585 INFO waitress: Serving on http://127.0.0.1:5000
+2026-11-01 23:18:50,888 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-11-01 23:18:51,536 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-11-01 23:20:08,106 INFO jobs: Job bbe45e7e8f34426293e9f5ca826f1c15 done: violence (14.14s)
+2026-11-02 14:03:01,615 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-11-02 14:03:02,766 INFO waitress: Serving on http://127.0.0.1:5000
+2026-11-02 14:03:15,608 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-11-02 14:03:17,604 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-11-02 16:26:01,971 INFO violence_app: Starting on http://127.0.0.1:5000 (debug=False)
+2026-11-02 16:26:03,872 INFO waitress: Serving on http://127.0.0.1:5000
+2026-11-02 16:26:19,948 INFO violence_model: weights_only load failed (Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL numpy._core.multiarray.scalar was not an allowed global by default. Please use `torch.serialization.add_safe_globals([numpy._core.multiarray.scalar])` or the `torch.serialization.safe_globals([numpy._core.multiarray.scalar])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.); retrying full load of hash-verified file
+2026-11-02 16:26:21,983 INFO violence_model: Loaded final_x3d_realtime on cpu (head=sequential, outputs=2)
+2026-11-02 16:27:06,298 INFO jobs: Job 1b422768368341de9addb37a4c9c3119 done: violence (34.77s)
